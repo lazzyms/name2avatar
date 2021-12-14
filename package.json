@@ -1,6 +1,6 @@
 {
   "name": "name2avatar",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "This package helps you generate a svg/png image buffer from the initials (extracted from name)",
   "main": "index.js",
   "scripts": {
@@ -9,9 +9,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/lazzyms/name2avatar"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "initials",
@@ -25,7 +22,7 @@
   ],
   "author": "Maulik Sompura <maulik.sompura06@gmail.com (https://me.mauliksompura.in)>",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "canvas": "^2.8.0"
   }
 }

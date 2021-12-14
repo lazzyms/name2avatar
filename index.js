@@ -28,19 +28,12 @@ const getInitials = (text) => {
   return result;
 };
 
-exports.getImageBuffer = ({
-  size,
-  bgColor,
-  color,
-  text,
-  isRounded,
-  type
-}) => {
+exports.getImageBuffer = ({ size, bgColor, color, text, isRounded, type }) => {
   size = size || 100;
   bgColor = bgColor || '#ffffff';
   color = color || '#000000';
   text = text || 'A A';
-  const canvas = createCanvas(size, size, type == 'svg' ? 'svg' : 'pdf');
+  const canvas = createCanvas(size, size, type == 'svg' ? 'svg' : undefined);
   const ctx = canvas.getContext('2d');
 
   ctx.fillStyle = bgColor;
