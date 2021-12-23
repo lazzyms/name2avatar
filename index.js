@@ -12,7 +12,7 @@ const getInitialsFromArray = (arr) => {
   return textResult;
 };
 
-const getInitials = (text) => {
+exports.getInitials = (text) => {
   let input = text.toUpperCase();
   let result = input;
 
@@ -40,10 +40,10 @@ exports.getImageBuffer = ({ size, bgColor, color, text, isRounded, type }) => {
   ctx.fillRect(0, 0, size, size);
 
   ctx.fillStyle = color;
-  ctx.font = `${(size * 50) / 100}px Roboto`;
+  ctx.font = `${(size * 50) / 100}px Arial`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText(getInitials(text), size / 2, size / 2);
+  ctx.fillText(this.getInitials(text), size / 2, size / 2);
 
   if (isRounded) {
     ctx.globalCompositeOperation = 'destination-atop';
