@@ -1,4 +1,5 @@
-const { createCanvas } = require('canvas');
+const { registerFont, createCanvas } = require('canvas');
+registerFont(__dirname + '/Roboto.ttf', { family: 'Comic Sans' })
 
 const getInitialsFromArray = (arr) => {
   let textResult = '';
@@ -40,7 +41,7 @@ exports.getImageBuffer = ({ size, bgColor, color, text, isRounded, type }) => {
   ctx.fillRect(0, 0, size, size);
 
   ctx.fillStyle = color;
-  ctx.font = `${(size * 50) / 100}px Arial`;
+  ctx.font = `${(size * 50) / 100}px Comic Sans`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillText(this.getInitials(text), size / 2, size / 2);
